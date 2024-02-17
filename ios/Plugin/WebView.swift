@@ -14,10 +14,7 @@ struct WebView: UIViewRepresentable {
     func makeUIView(context: Context) -> WKWebView {
         let webViewConfiguration = WKWebViewConfiguration()
         webViewConfiguration.allowsInlineMediaPlayback = true
-        
-   
-        webViewConfiguration.defaultWebpagePreferences.allowsContentJavaScript = true
-
+ 
         let webView = WKWebView(frame:.zero , configuration: webViewConfiguration);
 
         return webView
@@ -61,7 +58,6 @@ struct WebView: UIViewRepresentable {
 
         func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
             if message.name == "onFinalResult" {
-                print(message.body)
                 parent.onFinalResult?();
                 self.vw?.removeFromSuperview();
             }

@@ -1,3 +1,3 @@
 export interface FaceVerifyPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  showVerify(options: { url: string }): Promise<void>;
 }

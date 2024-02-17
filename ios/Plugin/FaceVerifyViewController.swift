@@ -12,18 +12,18 @@ import SwiftUI
 class FaceVerifyViewController: UIViewController {
     var url: String = ""
     private var withResult: Bool = false
-    var onClosed: ((Bool) -> Void)? = nil
+    var onFinalResult: ((Bool) -> Void)? = nil
     
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        onClosed?(withResult);
+        onFinalResult?(withResult);
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let webView = FaceVerifyView(url: self.url, onFinalResult: self.onFinalResult)
+        let webView = FaceVerifyView(url: self.url, onFinalResult: self.finalResult)
         let hostingController = UIHostingController(rootView: webView)
 
         view.backgroundColor = UIColor.white
@@ -40,7 +40,7 @@ class FaceVerifyViewController: UIViewController {
     }
     
     // Método que se llama cuando se presiona el botón
-    @objc func onFinalResult() {
+    @objc func finalResult() {
         self.withResult = true;
         self.dismiss(animated: true)
     }

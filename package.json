@@ -1,7 +1,7 @@
 {
-  "name": "fvo",
+  "name": "capacitor-faceverify",
   "version": "0.0.1",
-  "description": "Plugin para uso de FVO en ionic",
+  "description": "Plugin para uso de verificación de rostro en capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",

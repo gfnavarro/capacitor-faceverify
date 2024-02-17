@@ -1,11 +1,11 @@
 # fvo
 
-Plugin para uso de FVO en capacitor
+Plugin para uso de verificación de rostro en capacitor
 
 ## Install
 
 ```bash
-npm install fvo
+npm install @erroba/capacitor-faceverify
 npx cap sync
 ```
 

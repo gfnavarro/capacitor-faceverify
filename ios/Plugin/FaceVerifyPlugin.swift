@@ -13,7 +13,7 @@ public class FaceVerifyPlugin: CAPPlugin {
 
         let viewController = FaceVerifyViewController()
         viewController.url = url;
-        viewController.onClosed = { (withResult: Bool) in
+        viewController.onFinalResult = { (withResult: Bool) in
             call.resolve([
                  "result": withResult
              ])

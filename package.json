@@ -1,6 +1,6 @@
 {
   "name": "@erroba/capacitor-faceverify",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Plugin para uso de verificación de rostro en capacitor",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
